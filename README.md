@@ -1,12 +1,34 @@
-# React + Vite
+# 📚 BookVerse - Book Review Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack MERN app where users can add books, write reviews, and explore what others think. Built with modern UI and protected routes for secure user access.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- 🔐 **User Authentication (JWT based)**
+- 📘 **Add Book** (title, author, genre, image upload)
+- ⭐ **Submit Reviews** with star ratings
+- 📖 **View Book Details** with average rating & review list
+- 🗂 **Explore All Books** with sorting (by title, author, genre, rating)
+- 🔒 **Protected Pages** accessible only to logged-in users
+- 📋 **All Reviews Page** to read all book reviews (read-only)
+
+---
+
+##  Tech Stack
+
+### Frontend:
+- React.js
+- React Router DOM
+- Bootstrap 5
+- Custom CSS
+
+### Backend:
+- Node.js + Express
+- MongoDB + Mongoose
+- JWT for secure authentication
+- Multer for image upload handling
