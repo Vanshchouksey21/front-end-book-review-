@@ -1,0 +1,32 @@
+textarea.form-control {
+    resize: vertical;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease;
+}
+
+textarea.form-control:focus {
+    border-color: #4A6CF7;
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
+}
+
+input.form-control {
+    border-radius: 8px;
+}
+
+.badge {
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+
+.card {
+    border-radius: 12px;
+    background-color: #F8F9FC;
+}
+
+.btn-primary {
+    background-color: #4A6CF7 !important;
+    border: none;
+    border-radius: 8px;
+}

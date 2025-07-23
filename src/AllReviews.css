@@ -1,0 +1,26 @@
+.review-card {
+    border-radius: 12px;
+    border: none;
+    background-color: #ffffff;
+}
+
+.review-card h4 {
+    color: #4A6CF7;
+}
+
+.badge {
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.list-group-item {
+    background-color: #f8f9fc; /* light background for reviews */
+    border: none;
+    border-bottom: 1px solid #eee;
+    border-radius: 6px;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}

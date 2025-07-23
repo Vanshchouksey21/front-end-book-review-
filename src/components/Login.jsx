@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from './axios';
+import axios from '../axios';
 import { useNavigate, Link } from 'react-router-dom';
 
 function Login() {
@@ -20,10 +20,17 @@ function Login() {
     };
 
     return (
-        <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
-            <div className="card p-4 shadow" style={{ width: '100%', maxWidth: '400px' }}>
-                <h3 className="text-center text-primary mb-3">Login to Your Account</h3>
-                <p className="text-center text-muted mb-4">Welcome back! Please enter your credentials.</p>
+        <div
+            className="d-flex justify-content-center align-items-center vh-100"
+            style={{ backgroundColor: '#D5E6FB' }}
+        >
+            <div className="card p-4 shadow-lg border-0" style={{ width: '100%', maxWidth: '400px', borderRadius: '12px' }}>
+                <h3 className="text-center mb-2" style={{ color: '#4A6CF7' }}>
+                    Login to Your Account
+                </h3>
+                <p className="text-center text-muted mb-4" style={{ fontSize: '14px' }}>
+                    Welcome back! Please enter your credentials.
+                </p>
 
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
@@ -34,6 +41,7 @@ function Login() {
                             value={username}
                             onChange={e => setUsername(e.target.value)}
                             required
+                            style={{ borderRadius: '8px' }}
                         />
                     </div>
                     <div className="mb-3">
@@ -44,14 +52,28 @@ function Login() {
                             value={password}
                             onChange={e => setPassword(e.target.value)}
                             required
+                            style={{ borderRadius: '8px' }}
                         />
                     </div>
-                    <button className="btn btn-primary w-100" type="submit">Login</button>
+                    <button
+                        className="btn w-100"
+                        type="submit"
+                        style={{
+                            backgroundColor: '#4A6CF7',
+                            color: 'white',
+                            borderRadius: '8px'
+                        }}
+                    >
+                        Login
+                    </button>
                 </form>
 
                 <div className="text-center mt-3">
-                    <small className="text-muted">
-                        Don't have an account? <Link to="/signup">Sign up here</Link>
+                    <small style={{ color: '#333333' }}>
+                        Don't have an account?{' '}
+                        <Link to="/signup" style={{ color: '#FF7F50', textDecoration: 'none' }}>
+                            Sign up here
+                        </Link>
                     </small>
                 </div>
             </div>

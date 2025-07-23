@@ -1,58 +1,35 @@
-/* .book-cover {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-} */
-
 .custom-input {
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-    transition: border 0.3s;
+    transition: border 0.3s ease;
 }
 
 .custom-input:focus {
     border-color: #4a6cf7;
     outline: none;
-    box-shadow: 0 0 0 2px rgba(74, 108, 247, 0.2);
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
 }
 
 .custom-card {
     border-radius: 12px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    padding: 10px;
+    overflow: hidden;
 }
 
 .custom-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
-.badge {
-    font-size: 13px;
-    padding: 5px 10px;
-    border-radius: 20px;
+.book-cover {
+    height: 180px;
+    object-fit: contain;
+    background-color: #f8f9fc;
+    padding: 12px;
 }
 
 .card-title {
+    font-size: 1.1rem;
     font-weight: 600;
-    font-size: 18px;
-}
-
-.card-subtitle {
-    font-size: 14px;
-}
-
-.btn-outline-primary {
-    border-radius: 6px;
-}
-.book-cover {
-    height: 150px;
-    width: auto;
-    max-width: 100%;             
-    object-fit: contain;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    padding: 8px;                
+    color: #333333;
 }
