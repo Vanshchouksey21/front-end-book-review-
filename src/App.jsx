@@ -6,10 +6,13 @@ import BookList from './BookList';
 import AddBook from './AddBook';
 import BookDetail from './BookDetail';
 import HomePage from './HomePage';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 function App() {
   return (
     <BrowserRouter>
+     <Navbar />
     <Routes>
     <Route path="/" element={<HomePage />} /> {/* Home page */}
     <Route path="/signup" element={<Signup />} />
@@ -18,6 +21,8 @@ function App() {
     <Route path="/add-book" element={<AddBook />} />
     <Route path="/book/:id" element={<BookDetail />} />
 </Routes>
+            <Footer />
+
     </BrowserRouter>
   );
 }

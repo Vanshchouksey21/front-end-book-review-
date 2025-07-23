@@ -1,0 +1,17 @@
+.addbook-card {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.form-control {
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: #4a6cf7;
+    box-shadow: 0 0 0 2px rgba(74, 108, 247, 0.15);
+}
