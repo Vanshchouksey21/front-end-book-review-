@@ -1,9 +1,23 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './Login';
+import Signup from './Signup';
+import BookList from './BookList';
+import AddBook from './AddBook';
+import BookDetail from './BookDetail';
 
-const App = () => {
+function App() {
   return (
-    <div>App</div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<BookList />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/add-book" element={<AddBook />} />
+        <Route path="/book/:id" element={<BookDetail />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
