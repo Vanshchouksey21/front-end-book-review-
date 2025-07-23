@@ -1,17 +1,36 @@
-.addbook-card {
-    max-width: 400px;
+.book-cover {
     width: 100%;
-    border-radius: 10px;
-    background-color: white;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 
-.form-control {
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-    transition: all 0.2s ease;
+.custom-card {
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.form-control:focus {
-    border-color: #4a6cf7;
-    box-shadow: 0 0 0 2px rgba(74, 108, 247, 0.15);
+.custom-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.card-subtitle {
+    font-size: 14px;
+}
+
+.badge {
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.btn-outline-primary {
+    border-radius: 6px;
 }
