@@ -26,27 +26,33 @@ function BookDetail() {
             setReviewText('');
             setRating(1);
             fetchReviews();
-        } catch (err) {
+        } catch {
             alert('Add review failed. Are you logged in?');
         }
     };
 
     return (
-        <div>
-            <h2>Book Detail</h2>
-            <p>Average Rating: ⭐ {avgRating}</p>
-            <ul>
-                {reviews.map((rev, index) => (
-                    <li key={index}>
-                        {rev.reviewText} - {rev.rating}⭐ by {rev.reviewer}
+        <div className="container mt-5">
+            <h2 className="mb-3">Book Reviews</h2>
+            <p><strong>Average Rating:</strong> ⭐ {avgRating}</p>
+
+            <ul className="list-group mb-4">
+                {reviews.map((rev, i) => (
+                    <li className="list-group-item" key={i}>
+                        <p className="mb-1">{rev.reviewText} - {rev.rating}⭐</p>
+                        <small>by {rev.reviewer}</small>
                     </li>
                 ))}
             </ul>
 
-            <form onSubmit={handleSubmit}>
-                <textarea placeholder="Write a review..." value={reviewText} onChange={e => setReviewText(e.target.value)} required />
-                <input type="number" min="1" max="5" value={rating} onChange={e => setRating(e.target.value)} required />
-                <button type="submit">Add Review</button>
+            <form onSubmit={handleSubmit} className="w-50 mx-auto">
+                <div className="mb-3">
+                    <textarea className="form-control" placeholder="Write a review..." value={reviewText} onChange={e => setReviewText(e.target.value)} required />
+                </div>
+                <div className="mb-3">
+                    <input className="form-control" type="number" min="1" max="5" value={rating} onChange={e => setRating(e.target.value)} required />
+                </div>
+                <button className="btn btn-success w-100" type="submit">Submit Review</button>
             </form>
         </div>
     );

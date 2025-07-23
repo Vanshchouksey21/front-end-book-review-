@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from './axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -14,19 +14,47 @@ function Login() {
             localStorage.setItem('token', res.data.token);
             alert('Login Successful');
             navigate('/');
-        } catch (err) {
+        } catch {
             alert('Invalid credentials');
         }
     };
 
     return (
-        <div>
-            <h2>Login</h2>
-            <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} required />
-                <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} required />
-                <button type="submit">Login</button>
-            </form>
+        <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
+            <div className="card p-4 shadow" style={{ width: '100%', maxWidth: '400px' }}>
+                <h3 className="text-center text-primary mb-3">Login to Your Account</h3>
+                <p className="text-center text-muted mb-4">Welcome back! Please enter your credentials.</p>
+
+                <form onSubmit={handleSubmit}>
+                    <div className="mb-3">
+                        <input
+                            className="form-control"
+                            type="text"
+                            placeholder="Username"
+                            value={username}
+                            onChange={e => setUsername(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="mb-3">
+                        <input
+                            className="form-control"
+                            type="password"
+                            placeholder="Password"
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <button className="btn btn-primary w-100" type="submit">Login</button>
+                </form>
+
+                <div className="text-center mt-3">
+                    <small className="text-muted">
+                        Don't have an account? <Link to="/signup">Sign up here</Link>
+                    </small>
+                </div>
+            </div>
         </div>
     );
 }

@@ -12,21 +12,27 @@ function AddBook() {
         e.preventDefault();
         try {
             await axios.post('/books', { title, author, genre });
-            alert('Book Added!');
+            alert('Book added!');
             navigate('/');
-        } catch (err) {
-            alert('Error adding book. Are you logged in?');
+        } catch {
+            alert('Add book failed. Are you logged in?');
         }
     };
 
     return (
-        <div>
-            <h2>Add Book</h2>
-            <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} required />
-                <input type="text" placeholder="Author" value={author} onChange={e => setAuthor(e.target.value)} required />
-                <input type="text" placeholder="Genre" value={genre} onChange={e => setGenre(e.target.value)} required />
-                <button type="submit">Add Book</button>
+        <div className="container mt-5">
+            <h2 className="text-center mb-4">Add Book</h2>
+            <form onSubmit={handleSubmit} className="w-50 mx-auto">
+                <div className="mb-3">
+                    <input className="form-control" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} required />
+                </div>
+                <div className="mb-3">
+                    <input className="form-control" placeholder="Author" value={author} onChange={e => setAuthor(e.target.value)} required />
+                </div>
+                <div className="mb-3">
+                    <input className="form-control" placeholder="Genre" value={genre} onChange={e => setGenre(e.target.value)} required />
+                </div>
+                <button className="btn btn-primary w-100" type="submit">Add Book</button>
             </form>
         </div>
     );
